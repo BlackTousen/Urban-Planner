@@ -32,12 +32,12 @@ namespace Planner
             FiveZeroTwoSixth.Depth = 110;
             FiveZeroTwoSixth.Stories = 2;
             FiveZeroTwoSixth.Purchase("Michael");
-            List<Building> list = new List<Building>();
-            list.Add(FiveOneTwoEigth);
-            list.Add(FiveZeroTwoEigth);
-            list.Add(FiveOneTwoSixth);
-            list.Add(FiveZeroTwoSixth);
-            foreach (var building in list)
+            City centralCity = new City("Central City", "Barry Allen");
+            centralCity.AddBuilding(FiveOneTwoEigth);
+            centralCity.AddBuilding(FiveZeroTwoEigth);
+            centralCity.AddBuilding(FiveOneTwoSixth);
+            centralCity.AddBuilding(FiveZeroTwoSixth);
+            foreach (var building in centralCity.buildings)
             {
                 Console.Write($@"
 {building.Address}
